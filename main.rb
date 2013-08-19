@@ -5,6 +5,7 @@ def checkout
   print "How much cash has been given to pay for the transaction?"
   cash_given = gets.chomp.to_f * 100
   change = (cash_given - total_cost)
+  puts "The total change needed is #{(change/100)}."
 
   two_pound_coin = (change/200).to_i
   puts "#{two_pound_coin} x two pound coin"
@@ -37,8 +38,6 @@ def checkout
   one_p = (new_change/1).to_i
   puts "#{one_p} x 1p coin"
   new_change = (new_change - (one_p*1))
-
-
 end
 
 
